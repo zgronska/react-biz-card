@@ -49,7 +49,7 @@ a {
   background: var(--btn-bg);
   color: var(--btn-color);
   display: inline-flex;
-  gap: 0.5rem;
+
   align-items: center;
   justify-content: center;
   transition: all .2s ease-in;

@@ -5,10 +5,8 @@ export default function About() {
     <section className="about-section">
       <h2 className="section-title">About</h2>
       <p className="section-content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
-        suscipit quia, veniam quasi vero rem veritatis reiciendis exercitationem
-        pariatur id quis porro nam recusandae, et eveniet quidem voluptas saepe
-        minima.
+        A career switcher currently self-studying to be a kickass developer. Big
+        fan of CSS and palette generators.
       </p>
     </section>
   );
