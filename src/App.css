@@ -1,5 +1,165 @@
+:root {
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Colors */
+  --body-bg: #23252C;
+  --white: #fff;
+  --grey: #918E9B;
+
+  /* Colors - dark theme*/
+  --dark-primary: #1A1B21;
+  --dark-secondary: #161619;
+  --light-text-primary: var(--light-primary);
+  --light-text-secondary: #DCDCDC;
+  --gold-dark: #F3BF99;
+  --blue-dark: #5093E2;
+
+  /* Colors - light theme */
+  --light-primary: #F5F5F5;
+  --light-secondary: #D5D4D8;
+  --dark-text-primary: #2B283A;
+  --dark-text-secondary: #4A4E74;
+  --gold-light: #F47D27;
+  --blue-light: #297FE5;
+}
+
 #root {
   max-width: 317px;
-  margin: 0 auto;
+  margin: 1rem auto;
   background: var(--dark-primary);
+  border-radius: 1rem;
+}
+
+/*=============================================
+=            Header section            =
+=============================================*/
+
+.header--picture {
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.header--content {
+  padding: 1.5rem 2.25rem;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.header--title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-block: 0;
+}
+
+.header--subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gold-dark);
+  margin-block: 0;
+}
+
+.header--buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-block: 1rem 0.5rem;
+}
+
+.btn-header {
+  flex: 1;
+  font-size: 85%;
+  padding: 0.5rem 0.7rem;
+  font-weight: 500;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-email {
+  --btn-bg: var(--white);
+  --btn-color: var(--dark-secondary);
+  --btn-bg-hover: var(--grey);
+  --btn-color-hover: var(--white);
+  border: 1px solid #D1D5DB;
+}
+
+.btn-linkedin {
+  --btn-bg: var(--blue-dark);
+  --btn-color: var(--white);
+  --btn-bg-hover: var(--white);
+  --btn-color-hover: var(--blue-dark);
+}
+
+/*=====  End of Header section  ======*/
+
+
+/*=============================================
+=            About & Interests section            =
+=============================================*/
+
+main {
+  padding: 1.5rem 2.25rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  margin: 0;
+  color: var(--light-text-primary);
+}
+
+.section-content {
+  margin-top: 0;
+  font-size: 0.64rem;
+  line-height: 150%;
+  color: var(--light-text-secondary);
+}
+
+/*=====  End of About & Interests section  ======*/
+
+
+
+@media (prefers-color-scheme: light) {
+  #root {
+    background: var(--light-primary);
+  }
+
+  .header--title {
+    color: var(--dark-text-primary)
+  }
+
+  .header--subtitle {
+    color: var(--gold-light);
+  }
+
+  .btn-email {
+    --btn-bg: var(--white);
+    --btn-color: var(--dark-secondary);
+    --btn-bg-hover: var(--grey);
+    --btn-color-hover: var(--white);
+  }
+
+  .btn-linkedin {
+    --btn-bg: var(--blue-light);
+    --btn-color: var(--white);
+    --btn-bg-hover: var(--white);
+    --btn-color-hover: var(--blue-light);
+  }
+
+  .section-title {
+    color: var(--dark-text-primary);
+  }
+
+  .section-content {
+    color: var(--dark-text-secondary);
+  }
 }
